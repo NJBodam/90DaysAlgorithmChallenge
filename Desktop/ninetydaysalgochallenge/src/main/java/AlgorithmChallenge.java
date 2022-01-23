@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class AlgorithmChallenge {
     public static void main(String[] args) {
@@ -9,7 +7,8 @@ public class AlgorithmChallenge {
 
       //  ArrayList<Integer> str = new ArrayList<>(Arrays.asList(24, 85, 0));
        // System.out.println(SeriesSum.seriesSum(5));
-        System.out.println(UniqueCharacters.uniqueCharChecker("febdca"));
+        System.out.println(BillsATM.atmBilling(370));
+
 
 
     }
