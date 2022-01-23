@@ -31,7 +31,20 @@ public class RomanConversion {
         */
 
     public static String romanConverter(int num) {
-        StringBuilder roman = new StringBuilder();
+        String roman = "";
+        String[] romanNum = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        int[] numbers = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        for (int i = 0; i < numbers.length; i++) {
+            while (num >= numbers[i]) {
+                roman += romanNum[i];
+                num -= numbers[i];
+            }
+        }
+
+        return String.valueOf(roman);
+
+        // Alternative
+       /* StringBuilder roman = new StringBuilder();
         int rem = num;
         while (rem >= 1000) {
             roman.append("M");
@@ -127,6 +140,6 @@ public class RomanConversion {
             rem -= 1;
         }
 
-        return roman.toString();
+        return roman.toString();*/
     }
 }

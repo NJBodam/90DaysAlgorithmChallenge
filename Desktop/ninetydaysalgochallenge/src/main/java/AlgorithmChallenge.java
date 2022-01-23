@@ -9,7 +9,7 @@ public class AlgorithmChallenge {
 
       //  ArrayList<Integer> str = new ArrayList<>(Arrays.asList(24, 85, 0));
        // System.out.println(SeriesSum.seriesSum(5));
-        System.out.println(RomanConversion.romanConverter(41));
+        System.out.println(RomanConversion.romanConverter(53));
 
 
     }
