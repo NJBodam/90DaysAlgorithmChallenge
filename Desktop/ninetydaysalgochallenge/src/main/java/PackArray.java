@@ -28,7 +28,6 @@ public class PackArray {
      */
 
     public static int packArray(ArrayList<Integer> arr) {
-        int count = 1;
         int num = 0;
         if (arr.size() == 1) {
             return arr.get(0);
@@ -38,20 +37,15 @@ public class PackArray {
                 num = arr.get(i) + arr.get(i - 1);
                 arr.set(i - 1, num);
                 arr.remove(i);
-                count++;
             }
             for (int i = 1; i < arr.size(); i++) {
                 num = arr.get(i) * arr.get(i - 1);
                 arr.set(i - 1, num);
                 arr.remove(i);
-                count++;
             }
         }
         return packArray(arr);
+        // return arr.size() > 1 packArraya(arr) : arr.get(0);
     }
-
-
-
-
 
 }
