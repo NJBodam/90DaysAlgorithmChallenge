@@ -18,9 +18,9 @@ public class LargestPair {
 
     public static int largestPairSum(int[] arr) {
         Arrays.sort(arr);
-        return arr[arr.length - 1] + arr[arr.length -2];
         // Alternative
         // ArrayList<Integer> arr2 = (ArrayList<Integer>) Arrays.stream(arr).boxed().collect(Collectors.toList());;
         // Collections.reverse(arr2);
+        return arr[arr.length - 1] + arr[arr.length -2];
     }
 }

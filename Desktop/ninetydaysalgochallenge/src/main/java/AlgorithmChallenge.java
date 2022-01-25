@@ -7,7 +7,7 @@ public class AlgorithmChallenge {
 
       //  ArrayList<Integer> str = new ArrayList<>(Arrays.asList(24, 85, 0));
        // System.out.println(SeriesSum.seriesSum(5));
-        System.out.println(Printer.printerError("aaabbbbhaijjjm"));
+        System.out.println(ArrayOfIntegers.reverse(5));
 
 
 

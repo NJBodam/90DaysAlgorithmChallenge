@@ -31,6 +31,8 @@ public class Printer {
         String[] sArr = s.split("");
         List<String> arrLetters = Arrays.asList(letters.split(""));
         denominator = sArr.length;
+
+        System.out.println("HERE we are" + s.replaceAll("[a-m]", ""));
         for (int i = 0; i < sArr.length; i++) {
             if (!(arrLetters.contains(sArr[i]))) {
                 count++;
@@ -38,4 +40,16 @@ public class Printer {
         }
         return count + "/" + denominator;
     }
+
+    /*  Alternative
+    *   public static String printerError(String s) {
+        return s.replaceAll("[a-m]", "").length() + "/" + s.length();
+    }
+    *
+    *
+    * public static String printerError(String s) {
+        long errs = s.chars().filter( ch -> ch > 'm').count();
+        return errs+"/"+s.length();
+    }
+    * */
 }

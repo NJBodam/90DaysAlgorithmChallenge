@@ -23,7 +23,6 @@ public class SumOfNthTerm {
 
     public static String seriesSum(int n) {
         double result = 1;
-        double temp = 0;
         int den = 4;
         while (n > 1) {
             result += Math.round(((double) 1 / den) * 100.0) / 100.0;
