@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class AlgorithmChallenge {
     public static void main(String[] args) {
@@ -7,7 +8,7 @@ public class AlgorithmChallenge {
 
       //  ArrayList<Integer> str = new ArrayList<>(Arrays.asList(24, 85, 0));
        // System.out.println(SeriesSum.seriesSum(5));
-        System.out.println(ArrayOfIntegers.reverse(5));
+        System.out.println(ListFiltering.filterList(Arrays.asList(1, 2, "a", "b", 0, 15)));
 
 
 
