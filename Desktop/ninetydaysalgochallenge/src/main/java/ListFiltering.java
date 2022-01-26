@@ -28,4 +28,12 @@ public class ListFiltering {
 
     // ALTERNATIVE
     // return list.stream().filter(e -> e instanceof Integer).collect(Collectors.toList());
+    /*
+     ALTERNATIVE
+    *
+        public static List<?> filterList(List<?> list) {
+                List<?> collect = list.stream().filter(x -> x.getClass().equals(Integer.class)).collect(toList());
+                return collect;
+            }
+    * */
 }

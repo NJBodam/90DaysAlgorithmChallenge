@@ -22,4 +22,22 @@ public class VowelCounter {
         }
         return vowelsCount;
     }
+
+    // ALTERNATIVE
+    /*
+    * return str.replaceAll("(?i)[^aeiou]", "").length()
+    *
+    * return (int) str.chars().filter(c -> "aeiou".indexOf(c) >= 0).count();
+    *
+    * public static int vowelCount(String words) {
+        List<String> count = new ArrayList<>();
+        List<String> vowels = new ArrayList<String>(Arrays.asList("a", "e", "i", "o", "u"));
+        for(String ch : words.split("")) {
+            if(vowels.contains(ch)) {
+                count.add(ch);
+            }
+        }
+        return count.size();
+ }
+    * */
 }
