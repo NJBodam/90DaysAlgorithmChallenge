@@ -8,7 +8,7 @@ public class AlgorithmChallenge {
 
       //  ArrayList<Integer> str = new ArrayList<>(Arrays.asList(24, 85, 0));
        // System.out.println(SeriesSum.seriesSum(5));
-        System.out.println(BasicMathOp.basicMath("-", 15, 18));
+        System.out.println(Arrays.toString(EfficientSetOfSteps.efficienSteps("field", "bread", new String[]{"gather:field:wheat","bake:flour:bread","mill:wheat:flour"})));
 
 
 
