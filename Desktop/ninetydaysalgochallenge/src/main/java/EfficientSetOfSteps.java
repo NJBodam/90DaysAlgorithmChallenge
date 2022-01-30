@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class EfficientSetOfSteps {
     /*
@@ -45,22 +44,39 @@ public class EfficientSetOfSteps {
         String[] firstTask = arr[0].split(":");
         String[] secondTask = arr[1].split(":");
         String[] thirdTask = arr[2].split(":");
-        if (firstTask[2].equals(end) || secondTask[2].equals(end) || thirdTask[2].equals(end)) {
-            result[0] = firstTask[0];
-            result[1] = thirdTask[0];
+        if (firstTask[2].equals(end)) {
+            result[2] = firstTask[0];
+            if (secondTask[1].equals(start)) {
+                result[0] = secondTask[0];
+                result[1] = thirdTask[0];
+            } else if (thirdTask[1].equals(start)) {
+                result[0] = thirdTask[0];
+                result[1] = secondTask[0];
+            }
+            return result;
+        } else if (secondTask[2].equals(end)) {
             result[2] = secondTask[0];
+            if (firstTask[1].equals(start)) {
+                result[0] = firstTask[0];
+                result[1] = thirdTask[0];
+            } else if (thirdTask[1].equals(start)) {
+                result[0] = thirdTask[0];
+                result[1] = firstTask[0];
+            }
+            return result;
+        } else if (thirdTask[2].equals(end)) {
+            result[2] = thirdTask[0];
+            if (secondTask[1].equals(start)) {
+                result[0] = secondTask[0];
+                result[1] = thirdTask[0];
+            } else if (firstTask[1].equals(start)) {
+                result[0] = firstTask[0];
+                result[1] = secondTask[0];
+            }
             return result;
         }
         return new String[]{};
-    }
 
-    /*
-    for (int i = 0; i < arr.length; i++) {
-            String[] newArr = arr[i].split(":");
-            if (newArr[newArr.length - 1].equals(end)) {
-                for (int j = 0; j < arr.length; j++) {
-                    result[j] =
-                }
-            }*/
+    }
 
 }
