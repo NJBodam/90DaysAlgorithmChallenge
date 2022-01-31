@@ -25,7 +25,7 @@ public class SumOfNthTerm {
         double result = 1;
         int den = 4;
         while (n > 1) {
-            result += Math.round(((double) 1 / den) * 100.0) / 100.0;
+            result += ((double) 1 / den) * 100.0 / 100.0;
             System.out.println(result);
             n--;
             den += 3;

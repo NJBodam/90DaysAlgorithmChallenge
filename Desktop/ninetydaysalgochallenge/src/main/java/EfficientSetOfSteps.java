@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class EfficientSetOfSteps {
     /*
@@ -20,27 +23,136 @@ public class EfficientSetOfSteps {
         If no steps are needed (because the start and end item is the same), or if you cannot find a valid set of processes to get from the start to the end, return an empty array.
 
         Specification
-        Challenge.countChange(startItem, endItem, tasks)
+        Challenge.countChange(startItem, endItem, arr)
         Parameters
         startItem: String - Item to start with
 
         endItem: String - Item to try to reach
 
-        tasks: String[] - A mapping of strings from one item to another in the format "process_name:from_item:to_item"
+        arr: String[] - A mapping of strings from one item to another in the format "process_name:from_item:to_item"
 
         Return Value
         String[] - A list of processes that convert start item to end item, if it exists
 
         Examples
-        start_item	end_item	tasks	Return Value
+        start	end	arr	Return Value
         "field"	"bread"	["gather:field:wheat","bake:flour:bread","mill:wheat:flour"]	["gather","mill","bake"]
         "field"	"ferrari"	["gather:field:wheat","bake:flour:bread","mill:wheat:flour"]	[]
         "field"	"field"	["gather:field:wheat","bake:flour:bread","mill:wheat:flour"]	[]
+        *
+
+        expected:<[collect, freeze, carve]> but was:<[]>
+        *
+        expected:<[make_bricks, build_house]> but was:<[]>
+        *
+        *
+        *
+    String[] firsttask = tasks.get(0).split(":");
+    String[] secondtask = tasks.get(1).split(":");
+    String[] thirdtask = tasks.get(2).split(":");
+    String[] result = new String[3];
+    *
+    * try splitting every thing into a stream of strings
+
+
+    if(firsttask[1].equals(start_item) && secondtask[2].equals(end_item)) {
+      result[0] = firsttask[0];
+      result[2] = secondtask[0];
+      result[1] = thirdtask[0];
+      return Arrays.asList(result);
+    }
+    if(firsttask[1].equals(start_item) && thirdtask[2].equals(end_item)) {
+      result[0] = firsttask[0];
+      result[2] = thirdtask[0];
+      result[1] = secondtask[0];
+      return Arrays.asList(result);
+    }
+    if(secondtask[1].equals(start_item) && thirdtask[2].equals(end_item)) {
+      result[0] = secondtask[0];
+      result[2] = thirdtask[0];
+      result[1] = firsttask[0];
+      return Arrays.asList(result);
+    }
+
+
+
+      return new ArrayList<String>();
 
     * */
 
-    public static String[] efficienSteps(String start, String end, String[] arr) {
+    public static List<String> efficienSteps(String start, String end, List<String> arr) {
+        String[] firsttask = arr.get(0).split(":");
+        String[] secondtask = arr.get(1).split(":");
+        String[] thirdtask = arr.get(2).split(":");
         String[] result = new String[3];
+
+
+        if(firsttask[2].equals(end)) {
+            result[2] = firsttask[0];
+            if(secondtask[1].equals(start)) {
+                result[0] = secondtask[0];
+                result[1] = thirdtask[0];
+                return Arrays.asList(result);
+            } else if(thirdtask[1].equals(start)) {
+                result[0] = thirdtask[0];
+                result[1] = secondtask[0];
+                return Arrays.asList(result);
+            }
+        }
+        if(secondtask[2].equals(end)) {
+            result[2] = secondtask[0];
+            if(firsttask[1].equals(start)) {
+                result[0] = firsttask[0];
+                result[1] = thirdtask[0];
+                return Arrays.asList(result);
+            } else if(thirdtask[1].equals(start)) {
+                result[0] = thirdtask[0];
+                result[1] = secondtask[0];
+                return Arrays.asList(result);
+            }
+        }
+        if(thirdtask[2].equals(end)) {
+            result[2] = thirdtask[0];
+            if(secondtask[1].equals(start)) {
+                result[0] = secondtask[0];
+                result[1] = thirdtask[0];
+                return Arrays.asList(result);
+            } else if(firsttask[1].equals(start)) {
+                result[0] = firsttask[0];
+                result[1] = secondtask[0];
+                return Arrays.asList(result);
+            }
+        }
+        return new ArrayList<String>();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*String[] result = new String[3];
         String[] firstTask = arr[0].split(":");
         String[] secondTask = arr[1].split(":");
         String[] thirdTask = arr[2].split(":");
@@ -75,7 +187,7 @@ public class EfficientSetOfSteps {
             }
             return result;
         }
-        return new String[]{};
+        return new String[]{};*/
 
     }
 
