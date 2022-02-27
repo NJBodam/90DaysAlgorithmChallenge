@@ -1,3 +1,3 @@
-# 90DaysAlgorithmChallenge
+# React Springboot Employee Management App
 
-A file that contains algorithms that I will be solving in 90days and thier solutions.
+The front end application of my Java-springboot employee management application.
