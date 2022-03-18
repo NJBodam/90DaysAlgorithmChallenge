@@ -1,3 +1,5 @@
+package sub;
+
 public class SquareNSum {
 
     /*

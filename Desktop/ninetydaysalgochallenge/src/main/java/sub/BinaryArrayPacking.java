@@ -1,3 +1,5 @@
+package sub;
+
 import com.sun.tools.javac.util.List;
 
 import java.util.ArrayList;
@@ -31,13 +33,15 @@ public class BinaryArrayPacking {
  */
 
     public static int arrayPacking(ArrayList<Integer> integers) {
-        String binaryCompact = "";
+        StringBuilder binaryCompact = new StringBuilder();
         for (int i = integers.size() - 1; i >= 0; i--) {
             String numToBinaryString = Integer.toBinaryString(integers.get(i));
+            System.out.println(numToBinaryString);
             int stringToBinarInt = Integer.parseInt(numToBinaryString);
-            binaryCompact += String.format("%08d", stringToBinarInt);
+            System.out.println(stringToBinarInt);
+            binaryCompact.append(String.format("%08d", stringToBinarInt));
         }
-        return Integer.parseInt(binaryCompact, 2);
+        return Integer.parseInt(binaryCompact.toString(), 2);
     }
 
 

@@ -1,3 +1,5 @@
+package sub;
+
 public class BasicMathOp {
     /*
     * Your task is to create a function that does four basic mathematical operations.
@@ -10,6 +12,11 @@ public class BasicMathOp {
     ('-', 15, 18) --> -3
     ('*', 5, 5) --> 25
     ('/', 49, 7) --> 7*/
+    private String productName;
+
+    protected void run() {
+        System.out.println(this.productName + " is running!");
+    }
 
     public static Integer basicMath(String op, int v1, int v2) {
         int ans = 0;

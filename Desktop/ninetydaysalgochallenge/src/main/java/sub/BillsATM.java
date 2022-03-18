@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package sub;
 
 public class BillsATM {
 
@@ -28,6 +28,8 @@ public class BillsATM {
      * @return
      */
 
+
+
     public static String atmBilling(int amount) {
         int firstbill = 0;
         int secondbill = 0;
@@ -46,6 +48,7 @@ public class BillsATM {
         }
 
         int[] arr = {firstbill, secondbill, thirdbill};
-        return Arrays.toString(arr);
+        java.util.Arrays.sort(arr);
+        return java.util.Arrays.toString(arr);
     }
 }
