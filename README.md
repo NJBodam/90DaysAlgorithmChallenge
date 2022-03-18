@@ -1,3 +1,3 @@
-# React Springboot Employee Management App
+# 90 day algorithm challenge
 
-The front end API of my Java-springboot employee management REST API.
+A collection of algorithm questions and answers that I have solved.
