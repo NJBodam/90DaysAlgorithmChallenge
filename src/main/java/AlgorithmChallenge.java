@@ -22,7 +22,13 @@ public class AlgorithmChallenge {
 
         //MultiDimensionalArr.numValForTwoDimArray(new int[2][10]);
 
-        MultiDimensionalArr.numValForThreeDimArray();
+        int[][] twoDimArr = new int[][]{
+                {1, 1, 1},
+                {2, 2, 2},
+                {3, 3, 3}
+        };
+
+        MultiDimensionalArr.printTheThirdRow(twoDimArr);
 
 
 
