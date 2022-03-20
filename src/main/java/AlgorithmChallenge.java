@@ -19,7 +19,10 @@ public class AlgorithmChallenge {
 
     public static void main(String[] args) {
 
-        MultiDimensionalArr.numValForTwoDimArray(new int[3][10]);
+
+        //MultiDimensionalArr.numValForTwoDimArray(new int[2][10]);
+
+        MultiDimensionalArr.numValForThreeDimArray();
 
 
 
