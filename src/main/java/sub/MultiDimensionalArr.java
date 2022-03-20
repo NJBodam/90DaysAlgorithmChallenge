@@ -28,16 +28,20 @@ public class MultiDimensionalArr {
     }
 
     public static int numValForThreeDimArray() {
-        int[][][] threeDimArray = new int[2][3][4];
+        int[][][] threeDimArray = new int[3][3][3];
 
         int element = 0;
         for (int i = 0; i < threeDimArray.length; i++) {
             for (int j = 0; j < threeDimArray[i].length; j++) {
                 for (int k = 0; k < threeDimArray[i][j].length; k++) {
+
+                    //element++;
+
                     threeDimArray[i][j][k] = element;
+                    element++;
                 }
-                element++;
             }
+            element = 0;
         }
 
         for (int i = 0; i < threeDimArray.length; i++) {
@@ -46,6 +50,7 @@ public class MultiDimensionalArr {
             }
             System.out.println();
         }
+
         return 0;
     }
 
