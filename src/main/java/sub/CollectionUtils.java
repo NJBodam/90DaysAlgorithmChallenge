@@ -6,11 +6,13 @@ import java.util.Collection;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-class CollectionUtils {
+public class CollectionUtils {
 
     public static Collection<Integer> pow2(Collection<Integer> numbers) {
-        // write your code here
-        Collection<Integer> result = numbers;
-        return numbers.forEach(num -> Math.pow(num, num));
+        // write your code here;
+        Collection<Integer> result = new ArrayList<>();
+        result.addAll(numbers.forEach(number -> Math.pow(number, number)));
+        System.out.println(result);
+        return result;
     }
 }

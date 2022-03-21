@@ -1,9 +1,7 @@
+import sub.CollectionUtils;
 import sub.MultiDimensionalArr;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class AlgorithmChallenge {
     Object obj = new Object();
@@ -22,13 +20,20 @@ public class AlgorithmChallenge {
 
         //MultiDimensionalArr.numValForTwoDimArray(new int[2][10]);
 
-        int[][] twoDimArr = new int[][]{
-                {1, 1, 1},
-                {2, 2, 2},
-                {3, 3, 3}
-        };
+//        int[][] twoDimArr = new int[][]{
+//                {1, 1, 1},
+//                {2, 2, 2},
+//                {3, 3, 3}
+//        };
+//
+//        MultiDimensionalArr.printTheThirdRow(twoDimArr);
+        Collection<Integer> languages = new ArrayList<>();
 
-        MultiDimensionalArr.printTheThirdRow(twoDimArr);
+        languages.add(10);
+        languages.add(20);
+        languages.add(-5);
+
+        CollectionUtils.pow2(languages);
 
 
 
