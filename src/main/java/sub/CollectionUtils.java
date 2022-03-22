@@ -11,8 +11,8 @@ public class CollectionUtils {
     public static Collection<Integer> pow2(Collection<Integer> numbers) {
         // write your code here;
         Collection<Integer> result = new ArrayList<>();
-        result.addAll(numbers.forEach(number -> Math.pow(number, number)));
-        System.out.println(result);
+        numbers.forEach(number -> result.add(number * number));
+       // return numbers.stream().map(n -> n * n).collect(Collectors.toList());
         return result;
     }
 }
