@@ -15,4 +15,12 @@ public class CollectionUtils {
        // return numbers.stream().map(n -> n * n).collect(Collectors.toList());
         return result;
     }
+
+    public static Collection<String> filterPhones(Collection<String> phones, Collection<String> blacklist) {
+        // write your code here
+        phones.removeAll(blacklist);
+        //  phones.removeIf(p -> blacklist.contains(p));
+        // blacklist.forEach(phones::remove);
+        return phones;
+    }
 }
