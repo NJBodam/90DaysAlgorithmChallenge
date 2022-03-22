@@ -1,10 +1,6 @@
 package sub;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public class CollectionUtils {
 
@@ -12,6 +8,8 @@ public class CollectionUtils {
         // write your code here;
         Collection<Integer> result = new ArrayList<>();
         numbers.forEach(number -> result.add(number * number));
+       // List<Integer> list = new ArrayList<>(new int{2, 3, 5, 6});
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 0, 1, 7));
        // return numbers.stream().map(n -> n * n).collect(Collectors.toList());
         return result;
     }

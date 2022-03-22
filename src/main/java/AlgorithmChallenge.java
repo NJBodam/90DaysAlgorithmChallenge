@@ -29,6 +29,8 @@ public class AlgorithmChallenge {
 //        MultiDimensionalArr.printTheThirdRow(twoDimArr);
         Collection<Integer> languages = new ArrayList<>();
 
+        // ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 0, 1, 7));
+
         languages.add(10);
         languages.add(20);
         languages.add(-5);
