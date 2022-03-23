@@ -10,6 +10,7 @@ import static java.util.stream.Collectors.toList;
 public class MultiDimensionalArr {
 
 
+
     public static int numValForTwoDimArray(int[][] twoArray) {
 
         int[][] twoDimArray = new int[2][10];
@@ -19,22 +20,90 @@ public class MultiDimensionalArr {
             }
         }
 
-        twoDimArray[0][2] = 10;
-        twoDimArray[1][2] = 10;
-        twoDimArray[0][4] = 10;
-        twoDimArray[1][4] = 10;
-        twoDimArray[0][6] = 10;
-        twoDimArray[1][6] = 10;
 
         for (int i = 0; i < twoDimArray.length; i++) {
             System.out.println(Arrays.toString(twoDimArray[i]));
         }
         return 0;
     }
+    static class Cinema {
+        private Long totalRows;
+        private Long totalColumns;
+        private List<Seat> seatList;
+
+        Cinema(Long totalRows, Long totalColumns, List<Seat> seatList) {
+            this.totalRows = totalRows;
+            this.totalColumns = totalColumns;
+            this.seatList = seatList;
+        }
+
+        Cinema() {
+
+        }
+
+        public Long getTotalRows() {
+            return totalRows;
+        }
+
+        public void setTotalRows(Long totalRows) {
+            this.totalRows = totalRows;
+        }
+
+        public Long getTotalColumns() {
+            return totalColumns;
+        }
+
+        public void setTotalColumns(Long totalColumns) {
+            this.totalColumns = totalColumns;
+        }
+
+        public List<Seat> getSeatList() {
+            return seatList;
+        }
+
+        public void setSeatList(List<Seat> seatList) {
+            this.seatList = seatList;
+        }
+    }
+
+    static class Seat {
+        private Long row;
+        private Long column;
+
+        Seat(Long row, Long column) {
+            this.row = row;
+            this.column = column;
+        }
+        Seat() {
+
+        }
+
+        public Long getRow() {
+            return row;
+        }
+
+        public void setRow(Long row) {
+            this.row = row;
+        }
+
+        public Long getColumn() {
+            return column;
+        }
+
+        public void setColumn(Long column) {
+            this.column = column;
+        }
+    }
+
 
     public static void cinemaSeats() {
+        Seat seat = new Seat();
+        Cinema cinema = new Cinema();
+        cinema.setTotalRows(9L);
+        cinema.setTotalColumns(9L);
+
         int[][] dimArr = new int[9][9];
-        ArrayList
+
         int num = 1;
         for (int i = 0; i < dimArr.length; i++) {
             for (int j = 0; j < dimArr[i].length; j++) {
@@ -46,10 +115,14 @@ public class MultiDimensionalArr {
         for (int i = 0; i < dimArr.length; i++) {
             for (int j = 0; j < dimArr[i].length; j++) {
                 System.out.println("row:" + num);
+                seat.setRow((long) num);
                 System.out.println("column:" + dimArr[i][j]);
+                seat.setColumn((long) dimArr[i][j]);
+                cinema.getSeatList().add(seat);
             }
             num++;
         }
+        System.out.println(Cin);
 
 
     }
