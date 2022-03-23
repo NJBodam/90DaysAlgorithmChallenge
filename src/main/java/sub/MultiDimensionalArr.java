@@ -1,6 +1,12 @@
 package sub;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.*;
 
 public class MultiDimensionalArr {
 
@@ -27,6 +33,35 @@ public class MultiDimensionalArr {
         return 0;
     }
 
+    public static void reverseElements(int[][] twoDimArray) {
+        // write your code here
+//        List<Integer> list = Arrays.stream(twoDimArray[0]).boxed().collect(toList());
+//        Collections.reverse(list);
+//        int[] newArr = new int[list.size()];
+//        Arrays.stream(list.toArray()).mapToInt(num -> newArr.);
+//        twoDimArray[0] = newArr;
+
+
+        for (int i = 0; i < twoDimArray.length; i++) {
+           // List<Integer> list = Arrays.stream(twoDimArray[i]).boxed().collect(toList());
+            int temp = twoDimArray[i][0];
+            twoDimArray[i][0] = twoDimArray[i][3];
+            twoDimArray[i][3] = twoDimArray[i][1];
+            twoDimArray[i][1] =  twoDimArray[i][2];
+            twoDimArray[i][2] =  twoDimArray[i][3];
+            twoDimArray[i][3] = temp;
+
+           // System.out.println();
+            System.out.println(Arrays.toString(twoDimArray[i]));
+
+        }
+
+//        for (int i = 0; i < twoDimArray.length; i++) {
+//            System.out.println(Arrays.toString(twoDimArray[i]));
+//        }
+    }
+// CMD + alt + V === to get the variable type
+// CMD + alt + M === to extract method from a complex method
     public static int numValForThreeDimArray() {
         int[][][] threeDimArray = new int[3][3][3];
 
@@ -60,6 +95,8 @@ public class MultiDimensionalArr {
             System.out.print(twoDimArray[2][j] + " ");
         }
     }
+
+
 
 
 
