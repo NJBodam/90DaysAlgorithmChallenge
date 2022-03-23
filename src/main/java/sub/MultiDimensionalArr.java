@@ -42,6 +42,15 @@ public class MultiDimensionalArr {
             twoDimArray[i] = array;
             System.out.println(Arrays.toString(array));
         }
+
+        //Alternative
+//        for (int i = 0; i < twoDimArray.length; i++) {
+//            for (int j = 0; j < twoDimArray[i].length / 2; j++) {
+//                int temp = twoDimArray[i][j];
+//                twoDimArray[i][j] = twoDimArray[i][twoDimArray[i].length - j - 1];
+//                twoDimArray[i][twoDimArray[i].length - j - 1] = temp;
+//            }
+//        }
     }
 // CMD + alt + V === to get the variable type
 // CMD + alt + M === to extract method from a complex method
