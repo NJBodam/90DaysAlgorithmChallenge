@@ -32,6 +32,28 @@ public class MultiDimensionalArr {
         return 0;
     }
 
+    public static void cinemaSeats() {
+        int[][] dimArr = new int[9][9];
+        ArrayList
+        int num = 1;
+        for (int i = 0; i < dimArr.length; i++) {
+            for (int j = 0; j < dimArr[i].length; j++) {
+                dimArr[i][j] = num++;
+            }
+            num = 1;
+        }
+
+        for (int i = 0; i < dimArr.length; i++) {
+            for (int j = 0; j < dimArr[i].length; j++) {
+                System.out.println("row:" + num);
+                System.out.println("column:" + dimArr[i][j]);
+            }
+            num++;
+        }
+
+
+    }
+
     public static void reverseElements(int[][] twoDimArray) {
 
 

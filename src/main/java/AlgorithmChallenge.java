@@ -26,9 +26,9 @@ public class AlgorithmChallenge {
                 {5, 6, 7, 8}
         };
 
-        MultiDimensionalArr.reverseElements(twoDimArr);
+        //MultiDimensionalArr.reverseElements(twoDimArr);
 //
-//        MultiDimensionalArr.printTheThirdRow(twoDimArr);
+        MultiDimensionalArr.cinemaSeats();
         Collection<Integer> languages = new ArrayList<>();
         // ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 0, 1, 7));
         languages.add(10);
