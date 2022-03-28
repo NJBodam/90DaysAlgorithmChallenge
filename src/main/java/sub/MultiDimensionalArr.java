@@ -8,6 +8,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 public class MultiDimensionalArr {
+    
 
 
 
@@ -29,12 +30,12 @@ public class MultiDimensionalArr {
     static class Cinema {
         private Long totalRows;
         private Long totalColumns;
-        private List<Seat> seatList;
+        private List<Seat> availableSeats;
 
-        Cinema(Long totalRows, Long totalColumns, List<Seat> seatList) {
+        Cinema(Long totalRows, Long totalColumns, List<Seat> availableSeats) {
             this.totalRows = totalRows;
             this.totalColumns = totalColumns;
-            this.seatList = seatList;
+            this.availableSeats = availableSeats;
         }
 
         Cinema() {
@@ -58,11 +59,20 @@ public class MultiDimensionalArr {
         }
 
         public List<Seat> getSeatList() {
-            return seatList;
+            return availableSeats;
         }
 
-        public void setSeatList(List<Seat> seatList) {
-            this.seatList = seatList;
+        public void setSeatList(List<Seat> availableSeats) {
+            this.availableSeats = availableSeats;
+        }
+
+        @Override
+        public String toString() {
+            return "Cinema{" +
+                    "totalRows=" + totalRows +
+                    ", totalColumns=" + totalColumns +
+                    ", availableSeats=" + availableSeats +
+                    '}';
         }
     }
 
@@ -93,14 +103,23 @@ public class MultiDimensionalArr {
         public void setColumn(Long column) {
             this.column = column;
         }
+
+        @Override
+        public String toString() {
+            return "Seat{" +
+                    "row=" + row +
+                    ", column=" + column +
+                    '}';
+        }
     }
 
 
     public static void cinemaSeats() {
-        Seat seat = new Seat();
+        Seat seat;
         Cinema cinema = new Cinema();
         cinema.setTotalRows(9L);
         cinema.setTotalColumns(9L);
+        List<Seat> seats = new ArrayList<>();
 
         int[][] dimArr = new int[9][9];
 
@@ -114,15 +133,17 @@ public class MultiDimensionalArr {
 
         for (int i = 0; i < dimArr.length; i++) {
             for (int j = 0; j < dimArr[i].length; j++) {
+                seat = new Seat();
                 System.out.println("row:" + num);
                 seat.setRow((long) num);
                 System.out.println("column:" + dimArr[i][j]);
                 seat.setColumn((long) dimArr[i][j]);
-                cinema.getSeatList().add(seat);
+                seats.add(seat);
             }
             num++;
         }
-        System.out.println(Cin);
+        cinema.setSeatList(seats);
+       // System.out.println(cinema);
 
 
     }
