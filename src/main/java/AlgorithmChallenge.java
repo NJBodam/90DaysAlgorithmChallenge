@@ -23,6 +23,8 @@ public class AlgorithmChallenge {
 
 
         //MultiDimensionalArr.numValForTwoDimArray(new int[2][10]);
+        Set<String> nameSet = new TreeSet<>(Arrays.asList("Mr.Green", "Mr.Yellow", "Mr.Red"));
+        nameSet.forEach(System.out::println);
 
         int[][] twoDimArr = new int[][]{
                 {0, 0, 9, 9},
@@ -60,9 +62,26 @@ public class AlgorithmChallenge {
 
         System.out.println(operator.apply("names"));
 
+        Thread t = Thread.currentThread(); // main thread
 
+        Thread tt = new Thread(); // main thread
 
+        // Thread Properties
 
+        System.out.println("Name: " + t.getName());
+        System.out.println("ID: " + t.getId());
+        System.out.println("Alive: " + t.isAlive());
+        System.out.println("Priority: " + t.getPriority());
+        System.out.println("Daemon: " + t.isDaemon());
+
+        t.setName("my-thread");
+        System.out.println("New name: " + t.getName());
+
+        System.out.println("Name: " + tt.getName());
+        System.out.println("ID: " + tt.getId());
+        System.out.println("Alive: " + tt.isAlive());
+        System.out.println("Priority: " + tt.getPriority());
+        System.out.println("Daemon: " + tt.isDaemon());
     }
 
 

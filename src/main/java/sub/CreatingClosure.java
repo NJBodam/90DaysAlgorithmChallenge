@@ -1,6 +1,8 @@
 package sub;
 
+import java.util.function.DoubleUnaryOperator;
 import java.util.function.IntBinaryOperator;
+import java.util.function.LongUnaryOperator;
 import java.util.function.UnaryOperator;
 
 public class CreatingClosure {
@@ -19,4 +21,17 @@ public class CreatingClosure {
     public static IntBinaryOperator binaryOperator = (x, y) -> {
         return x > y ? x : y;
     };
+
+    public static int a = 10;
+    public static int b = 20;
+    public static int c = 30;
+
+    public static DoubleUnaryOperator unaryOperator = x -> {
+        return a * Math.pow(x, 2) + b * x + c;
+    }; // Write your code here
+
+    public static LongUnaryOperator longUnaryOperator = x -> {
+        return x % 2 == 0 ? x + 2 : x + 1;
+    }; // Write your code here
+
 }

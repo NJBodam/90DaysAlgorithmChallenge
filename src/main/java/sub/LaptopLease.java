@@ -40,7 +40,6 @@ public class LaptopLease {
             if(times.size() == 0) {
                 laptops = 0;
             }
-
         }
         return laptops;
     }
