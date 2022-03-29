@@ -1,5 +1,6 @@
 package sub;
 
+import java.util.function.IntBinaryOperator;
 import java.util.function.UnaryOperator;
 
 public class CreatingClosure {
@@ -14,4 +15,8 @@ public class CreatingClosure {
     public static final String SUFFIX = "__suff__";
 
     public static UnaryOperator<String> operator = (str) -> PREFIX + str.trim() + SUFFIX;
+// without use Math library
+    public static IntBinaryOperator binaryOperator = (x, y) -> {
+        return x > y ? x : y;
+    };
 }
