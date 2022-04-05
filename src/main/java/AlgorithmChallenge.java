@@ -17,10 +17,24 @@ public class AlgorithmChallenge {
         }
     }
 
+    private static long mainThreadId = Thread.currentThread().getId();
+
+    public static void main(String[] args) throws InterruptedException {
+
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+
+      //  SlowStringProcessor processor = new SlowStringProcessor(str);
+      //  System.out.println(processor.getNumberOfUniqueCharacters());
+
+        System.out.println("Started");
+        Thread.currentThread().start();
+        Thread.currentThread().wait();
 
 
-    public static void main(String[] args) {
+        Thread.sleep(2000L); // suspend current thread for 2000 millis
 
+        System.out.println("Finished");
 
         //MultiDimensionalArr.numValForTwoDimArray(new int[2][10]);
         Set<String> nameSet = new TreeSet<>(Arrays.asList("Mr.Green", "Mr.Yellow", "Mr.Red"));
