@@ -21,6 +21,7 @@ public class Threading {
 
 
     public static void main(String[] args) throws InterruptedException {
+
         Scanner scanner = new Scanner(System.in);
 
         int from1Incl = scanner.nextInt(); // left limit of the first range
@@ -32,6 +33,8 @@ public class Threading {
         RangeSummator summator1 = new RangeSummator(from1Incl, to1Incl); // first summator
         RangeSummator summator2 = new RangeSummator(from2Incl, to2Incl); // second summator
 
+        System.out.println(2 / 0);
+
         summator1.start();
         summator1.join();
         long partialSum1 = summator1.getResult();
@@ -42,6 +45,18 @@ public class Threading {
         long sum = partialSum1 + partialSum2; // the sum is 0, fix it!
 
         System.out.println(sum);
+
+
+        // To show what happens
+//        Thread thread = new Thread(() -> {
+//            String str = null;
+//            System.out.println("Length is " + str.length());
+//        }, "secondary");
+//        thread.start();
+//
+//        while (true) {
+//            // do nothing
+//        }
     }
 
     //Don't change the code below
