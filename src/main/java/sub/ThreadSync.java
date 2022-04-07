@@ -17,7 +17,7 @@ class ThreadSync extends Thread {
     // This demonstrates a static synchronized method. Where it is impossible for more than one thread
     // To execute the code in the method at the same time.
 
-    public static void doSomething() {
+    public static synchronized void doSomething() {
 
         String threadName = Thread.currentThread().getName();
         System.out.println(String.format("%s entered the method", threadName));
@@ -43,7 +43,6 @@ class ThreadSync extends Thread {
         Mythread t1 = new Mythread(ts1);
         Mythread t2 = new Mythread(ts2);
         t1.start();
-        t1.join();
         t2.start();
     }
 
