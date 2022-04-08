@@ -1,4 +1,4 @@
-package sub;
+package sub.threadmgmt;
 
 class ThreadSync extends Thread {
 
