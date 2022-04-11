@@ -96,6 +96,8 @@ public class AlgorithmChallenge {
         System.out.println("Alive: " + tt.isAlive());
         System.out.println("Priority: " + tt.getPriority());
         System.out.println("Daemon: " + tt.isDaemon());
+
+        System.out.println(">>>>>>>>>>>>>>>" + Math.round(11 / 3));
     }
 
 
