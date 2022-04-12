@@ -17,11 +17,11 @@ public class SinglyLinkedList {
     public static LinkedList reverseLinkedList(LinkedList head) {
         // Write your code here.
 
-        while (head.next <= 0) {
-            int temp = head.next.value;
-            head.next.value = head.value;
-            head.value = temp;
-        }
+//        while (head.next <= 0) {
+//            int temp = head.next.value;
+//            head.next.value = head.value;
+//            head.value = temp;
+//        }
 
         return head;
     }
@@ -36,6 +36,5 @@ public class SinglyLinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList test = newLinkedList(new int[] {0, 1, 2, 3, 4, 5});
     }
 }
