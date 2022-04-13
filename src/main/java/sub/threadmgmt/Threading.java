@@ -24,6 +24,7 @@ public class Threading {
 
         Scanner scanner = new Scanner(System.in);
 
+
         int from1Incl = scanner.nextInt(); // left limit of the first range
         int to1Incl = scanner.nextInt();   // right limit of the first range
 
