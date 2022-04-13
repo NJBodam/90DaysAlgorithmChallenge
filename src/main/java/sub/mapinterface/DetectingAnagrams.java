@@ -46,6 +46,8 @@ public class DetectingAnagrams {
 
     Each line must look like key=value, for example, Gamma=3.*/
         // SOLUTION
+
+
         Map<String, Integer> map = new TreeMap<>();
         map.put("Gamma",  3);
         map.put("Omega", 24);
