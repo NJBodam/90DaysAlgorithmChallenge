@@ -20,7 +20,7 @@ public class MapUtils {
 
     public static void printMap(Map<String, Integer> map) {
         // write your code here
-        map.forEach((key, value) -> System.out.println(key + " : " + value));
+        map.forEach((key, value) -> System.out.printf("%s : %d\n", key, map.get(key));
     }
 
 
