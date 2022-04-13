@@ -1,9 +1,14 @@
-package sub;
+package sub.mapinterface;
+
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class DetectingAnagrams {
 
+    // QUESTION 1
     /*Sherlock Holmes and the mystery of anagrams
                .
         In this problem, you are Sherlock Holmes and you want to quickly detect all anagrams.
@@ -29,10 +34,24 @@ public class DetectingAnagrams {
         return wordMap;
     }
 
+
+
     public static void main(String[] args) {
         // put your code here
-        Scanner sc = new Scanner(System.in);
-        System.out.println(getCharCountMap(sc.next()).equals(getCharCountMap(sc.next())) ? "yes" : "no");
+    //    Scanner sc = new Scanner(System.in);
+       // System.out.println(getCharCountMap(sc.next()).equals(getCharCountMap(sc.next())) ? "yes" : "no");
+
+        //QUESTION 2
+    /*Output each key-value pair of the given map in the loop, each pair on a new line.
+
+    Each line must look like key=value, for example, Gamma=3.*/
+        // SOLUTION
+        Map<String, Integer> map = new TreeMap<>();
+        map.put("Gamma",  3);
+        map.put("Omega", 24);
+        map.put("Alpha",  1);
+
+        map.forEach((name, number) -> System.out.println(name + "=" + number));
     }
 
 //        Alternative Solution 2
