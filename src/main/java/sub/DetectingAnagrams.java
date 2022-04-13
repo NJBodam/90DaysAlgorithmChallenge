@@ -35,6 +35,7 @@ public class DetectingAnagrams {
         System.out.println(getCharCountMap(sc.next()).equals(getCharCountMap(sc.next())) ? "yes" : "no");
     }
 
+//        Alternative Solution 2
 
 //        String word = sc.nextLine().toLowerCase(Locale.ROOT);
 //        String word2 = sc.nextLine().toLowerCase(Locale.ROOT);
