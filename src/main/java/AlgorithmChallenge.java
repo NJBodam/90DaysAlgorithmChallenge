@@ -3,6 +3,7 @@ import sub.MultiDimensionalArr;
 
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static sub.CreatingClosure.operator;
 import static sub.LambdaMult.printResultOfLambda;
@@ -19,26 +20,51 @@ public class AlgorithmChallenge {
 
     private static long mainThreadId = Thread.currentThread().getId();
 
-    public static void main(String[] args) throws InterruptedException {
+     public static void main(String[] args) throws InterruptedException {
 
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
+        //Scanner scanner = new Scanner(System.in);
+       // String str = scanner.nextLine();
 
-      //  SlowStringProcessor processor = new SlowStringProcessor(str);
-      //  System.out.println(processor.getNumberOfUniqueCharacters());
+         // Collatz conjecture: It was proved that such a sequence will stop at
+         // number 1 for any initial natural number n up to 2^68.
 
-        System.out.println("Started");
-        Thread.currentThread().start();
-        Thread.currentThread().wait();
+//         int num = scanner.nextInt();
+//         System.out.print(num + " ");
+//         while(num != 1) {
+//             if (num % 2 == 0) {
+//                 num = num / 2;
+//             } else {
+//                 num = num * 3 + 1;
+//             }
+//             System.out.print(num + " ");
+//         }
 
 
-        Thread.sleep(2000L); // suspend current thread for 2000 millis
+         // Getting the largest value from a series of input
+        // Start Coding Here
+//        List<Integer> numArr = new ArrayList<>();
+//
+//        while(scanner.nextInt() != 0) {
+//            numArr.add(scanner.nextInt());
+//        }
+//        System.err.println(numArr.stream().max(Integer::compare).get());
 
-        System.out.println("Finished");
 
-        //MultiDimensionalArr.numValForTwoDimArray(new int[2][10]);
-        Set<String> nameSet = new TreeSet<>(Arrays.asList("Mr.Green", "Mr.Yellow", "Mr.Red"));
-        nameSet.forEach(System.out::println);
+        //  SlowStringProcessor processor = new SlowStringProcessor(str);
+        //  System.out.println(processor.getNumberOfUniqueCharacters());
+
+//        System.out.println("Started");
+//        Thread.currentThread().start();
+//        Thread.currentThread().wait();
+//
+//
+//        Thread.sleep(2000L); // suspend current thread for 2000 millis
+//
+//        System.out.println("Finished");
+//
+//        //MultiDimensionalArr.numValForTwoDimArray(new int[2][10]);
+//        Set<String> nameSet = new TreeSet<>(Arrays.asList("Mr.Green", "Mr.Yellow", "Mr.Red"));
+//        nameSet.forEach(System.out::println);
 
         int[][] twoDimArr = new int[][]{
                 {0, 0, 9, 9},
@@ -59,45 +85,43 @@ public class AlgorithmChallenge {
 
         // it returns the length of a string
         Function<String, Integer> f = s -> s.length();
-        printResultOfLambda(f); // it prints 20
+       // printResultOfLambda(f); // it prints 20
 
         // It prints the number of digits: 4
         // A funtion that takes in a lambda expression
-        printResultOfLambda(s -> {
-            int count = 0;
-            for (char c : s.toCharArray()) {
-                if (Character.isDigit(c)) {
-                    count++;
-                }
-            }
-            return count;
-        });
-
-
-        System.out.println(operator.apply("names"));
-
-        Thread t = Thread.currentThread(); // main thread
-
-        Thread tt = new Thread(); // main thread
+//        printResultOfLambda(s -> {
+//            int count = 0;
+//            for (char c : s.toCharArray()) {
+//                if (Character.isDigit(c)) {
+//                    count++;
+//                }
+//            }
+//            return count;
+//        });
+//
+//
+//        System.out.println(operator.apply("names"));
+//
+//        Thread t = Thread.currentThread(); // main thread
+//
+//        Thread tt = new Thread(); // main thread
 
         // Thread Properties
+//        System.out.println("Name: " + t.getName());
+//        System.out.println("ID: " + t.getId());
+//        System.out.println("Alive: " + t.isAlive());
+//        System.out.println("Priority: " + t.getPriority());
+//        System.out.println("Daemon: " + t.isDaemon());
+//
+//        t.setName("my-thread");
+//        System.out.println("New name: " + t.getName());
+//
+//        System.out.println("Name: " + tt.getName());
+//        System.out.println("ID: " + tt.getId());
+//        System.out.println("Alive: " + tt.isAlive());
+//        System.out.println("Priority: " + tt.getPriority());
+//        System.out.println("Daemon: " + tt.isDaemon());
 
-        System.out.println("Name: " + t.getName());
-        System.out.println("ID: " + t.getId());
-        System.out.println("Alive: " + t.isAlive());
-        System.out.println("Priority: " + t.getPriority());
-        System.out.println("Daemon: " + t.isDaemon());
-
-        t.setName("my-thread");
-        System.out.println("New name: " + t.getName());
-
-        System.out.println("Name: " + tt.getName());
-        System.out.println("ID: " + tt.getId());
-        System.out.println("Alive: " + tt.isAlive());
-        System.out.println("Priority: " + tt.getPriority());
-        System.out.println("Daemon: " + tt.isDaemon());
-
-        System.out.println(">>>>>>>>>>>>>>>" + Math.round(11 / 3));
     }
 
 

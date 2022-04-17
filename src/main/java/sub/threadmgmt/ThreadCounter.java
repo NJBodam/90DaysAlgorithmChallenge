@@ -36,6 +36,8 @@ class ThreadCounter {
 
     public static void main(String[] args) throws InterruptedException {
 
+       StartingRunnables.createRunnable("did it", 3).run();
+
 //        SomeClass someClass = new SomeClass();
 //        MyThread t1 = new MyThread(someClass);
 //        Thread anotherClass = new SomeClass();

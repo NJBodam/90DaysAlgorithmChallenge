@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class PaintCalculator {
 
     private static double calculateWallArea(double l, double w, double h) {
-        return 2 * (l * h + l * w + h * w);
+        return 2 * (l * h + h * w);
     }
 
     public static double gallonsOfPaintNeeded(double surfaceArea) {
-        System.err.println(surfaceArea);
-        System.out.println("Price of gallons of paint needed: " + (surfaceArea / 350) * 32);
+       // System.err.println(surfaceArea);
+        System.out.println("Total price of gallons of paint needed: " + (surfaceArea / 350) * 32);
         return surfaceArea / 350;
     }
 
@@ -26,7 +26,7 @@ public class PaintCalculator {
         System.out.println("Input height of room: ");
         double h = sc.nextDouble();
 
-        System.out.println(gallonsOfPaintNeeded(calculateWallArea(l, w, h)));
+        System.out.println("Number of Gallons needed: " + gallonsOfPaintNeeded(calculateWallArea(l, w, h)));
 
     }
 }
