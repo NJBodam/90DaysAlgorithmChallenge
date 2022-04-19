@@ -17,6 +17,7 @@ public class InchConversion {
         double inches = sc.nextDouble();
         System.out.println(inches + " inches == " + convertInchesToFeet(inches) + " Feet");
         System.out.println(inches + " inches == " + convertInchesToYard(inches) + " Yard");
+        System.out.println(2 + (-3) + 5 + (-8));
 
 
     }
