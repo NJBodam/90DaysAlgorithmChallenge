@@ -122,7 +122,15 @@ public class AlgorithmChallenge {
 //        System.out.println("Priority: " + tt.getPriority());
 //        System.out.println("Daemon: " + tt.isDaemon());
 
-    }
+         String city = "Lagos";
+         String capital = "Abuja";
+
+         Objects.equals(city, "Melbourne");
+         System.out.println(Objects.equals(city, capital));
+
+
+
+     }
 
 
 }
