@@ -62,4 +62,5 @@ public class HelloFrame extends JFrame {
     public static void main(final String[] args) {
         new HelloFrame();
     }
+
 }
