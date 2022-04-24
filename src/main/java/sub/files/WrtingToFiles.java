@@ -11,14 +11,14 @@ public class WrtingToFiles {
         File file = new File("printTestfile.txt"); // some file
 
         try (PrintWriter printWriter = new PrintWriter(file)) {
-            printWriter.printf("%s dolor sit %s", "Lorem", "ipsum", "amet");
+            printWriter.print("We are testing this \nwe are testing it again \nand testing again to be sure");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
 
         try (Scanner sc = new Scanner(file)) {
-            if(sc.hasNextLine()) {
+            while (sc.hasNext()) {
                 System.out.println(sc.nextLine());
             }
         } catch (FileNotFoundException e) {
