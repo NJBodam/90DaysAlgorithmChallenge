@@ -67,4 +67,8 @@ public class CatchingExceptions {
             System.out.println("Caught: " + e.getClass().getName());
         }
     }
+
+    class MyException extends Throwable {
+
+    }
 }

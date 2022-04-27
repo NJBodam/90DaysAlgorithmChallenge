@@ -19,6 +19,5 @@ public class InchConversion {
         System.out.println(inches + " inches == " + convertInchesToYard(inches) + " Yard");
         System.out.println(2 + (-3) + 5 + (-8));
 
-
     }
 }
