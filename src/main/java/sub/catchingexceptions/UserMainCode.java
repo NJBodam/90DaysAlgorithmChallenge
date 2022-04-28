@@ -7,7 +7,7 @@ public class UserMainCode {
         int rem = 14 / 3;
         System.out.println(Math.floor(14/3));
     }
-
+// Mr Myers Exam Mark Algorithm
     public static int calc (int input1, int[] input2){
         int result = 0;
         int holder = input1;
