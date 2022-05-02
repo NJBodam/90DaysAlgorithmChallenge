@@ -1,7 +1,11 @@
 package sub.queueinterface;
 
+import com.sun.tools.javac.util.List;
+
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.Queue;
 
 public class DequeTest {
 
@@ -23,7 +27,20 @@ public class DequeTest {
         String sPollLast = states.pollLast();
 
         while (states.peek() != null) {
-            System.out.print(states.pop());
+            System.out.println(states.pop());
         }
+        /*Create ArrayDeque named queue and enqueue the following four numbers 2, 0, 1, 7.
+        The code for displaying the queue is already written.
+
+        Sample Input 1:
+
+        Sample Output 1:
+        [2, 0, 1, 7]
+        */
+        Queue<Integer> caps = new ArrayDeque<>(new ArrayList<Integer>(List.of(2, 0, 1, 7)));
+        while (caps.peek() != null) {
+            System.out.print(caps.poll());
+        }
+
     }
 }

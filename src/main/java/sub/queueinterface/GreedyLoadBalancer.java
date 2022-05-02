@@ -52,26 +52,24 @@ public class GreedyLoadBalancer {
            // String[] arr = sc.next().split(" ");
             int task = sc.nextInt();
             int load = sc.nextInt();
-            if(secondQLoad >= firstQLoad) {
+            if (secondQLoad >= firstQLoad) {
                 firstQ.add(task);
                 firstQLoad += load;
-            }
-            else {
+            } else {
                 secondQ.add(task);
                 secondQLoad += load;
             }
             size--;
         }
 
-        while (firstQ.peek() != null) {
-            System.out.print(firstQ.poll() + " ");
-        }
+        print(firstQ);
+        System.out.println();
+        print(secondQ);
 
-        System.err.println();
-        while (secondQ.peek() != null) {
-            System.out.print(secondQ.poll() + " ");
-        }
+    }
 
+    private static void print(Queue queue) {
+        queue.forEach(System.out::print);
     }
 
 }
