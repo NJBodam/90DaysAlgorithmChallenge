@@ -43,5 +43,10 @@ public class RegexEp {
         " AB ".matches(regex4); // false, 'B' is not a digit
         " -1 ".matches(regex4); // false, '-' is not an alphanumeric character, but '1' is OK.
 
+        // Boundary shortcut
+        String startRegex = "\\bcat"; // matches the part of the word that starts with "cat"
+        String endRegexx = "cat\\b"; // matches the part of the word that ends with "cat"
+        String wholeRegex = "\\bcat\\b"; // matches the whole word "cat"
+
     }
 }
