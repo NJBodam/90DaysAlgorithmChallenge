@@ -19,7 +19,10 @@ public class CheckDateRegex {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String dateRegex = "(0\\d|[1-3]\\d)[-/.](0\\d|1[0-3])[-/.](19|20)\\d{2}";
+        String dateRegex = "((0[1-9]|[1-3]\\d)[-/.](0[1-9]|" +
+                "1[0-2])[-/.](19|20)\\d{2})|" +
+                "((19|20)\\d{2}[-/.](0[1-9]|1[0-2])" +
+                "[-/.](0[1-9]|[1-3]\\d))";
 
         // (5[1-5]|2[2-7])
         //"(5[1-5]|2[2-7])\\d{14}"
