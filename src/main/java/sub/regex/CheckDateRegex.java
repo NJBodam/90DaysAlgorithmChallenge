@@ -17,6 +17,7 @@ public class CheckDateRegex {
     */
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         String dateRegex = "((0[1-9]|[1-3]\\d)[-/.](0[1-9]|" +
@@ -24,15 +25,9 @@ public class CheckDateRegex {
                 "((19|20)\\d{2}[-/.](0[1-9]|1[0-2])" +
                 "[-/.](0[1-9]|[1-3]\\d))";
 
-        // (5[1-5]|2[2-7])
-        //"(5[1-5]|2[2-7])\\d{14}"
-
         String date = scanner.nextLine();
         System.out.println(date.matches(dateRegex) ? "YES" : "NO");
-        // |0//d
 
-        // 21/12/1999
 
-        // (19|20)[0-9][0-9][/]((0//d)|[10-12])[/]((0//d)|10-31)|
     }
 }
