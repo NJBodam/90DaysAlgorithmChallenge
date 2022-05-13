@@ -12,9 +12,8 @@ public class PasswordRegex {
         String regexNum = ".*[\\d+].*";
         String size = "[\\w]{12,}";
 
-        String reg = "(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{12,}";
-
         // ALTERNATIVE SOLUTION
+        String reg = "(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{12,}";
         System.out.println(pw.matches(reg) ? "YES" : "NO");
 
         if(pw.matches(regexCaps) && pw.matches(regexLow) && pw.matches(regexNum) && pw.matches(size)){
