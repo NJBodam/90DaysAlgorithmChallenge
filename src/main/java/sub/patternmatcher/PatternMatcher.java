@@ -18,7 +18,7 @@ public class PatternMatcher {
 
         System.out.println(Pattern.matches(".*[Jj]ava.*", "We use Java to write modern applications")); // true
 
-        System.err.println(Pattern.matches("(?is).*java.*", "\n\nJAVA\n\n")); // true
+        System.out.println(Pattern.matches("(?is).*java.*", "\n\nJAVA\n\n")); // true
 
         String text1 = "Regex is a powerful tool for programmers";
 
@@ -31,8 +31,8 @@ public class PatternMatcher {
         Pattern pattern2 = Pattern.compile("^tool$");
         Matcher matcher2 = pattern2.matcher(text1);
 
-        System.out.println(matcher2.matches()); // false
-        System.out.println(matcher2.find());   // false
+        System.err.println(matcher2.matches()); // false
+        System.err.println(matcher2.find());   // false
 
 
     }
