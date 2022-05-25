@@ -70,7 +70,17 @@ public class NumberParsing {
     */
     public static void main(String[] args) {
 
-        numParser();
+       // numParser();
+        String years = "1887 1898 1977 1981 1982 1985 1987 2001 2003 2004";
+
+        Pattern pattern = Pattern.compile("1\\d\\d7");
+
+        Matcher matcher = pattern.matcher(years);
+
+        matcher.find();
+        matcher.find();
+
+        matcher.start();
     }
 
     private static void numParser() {

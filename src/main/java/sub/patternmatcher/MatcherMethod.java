@@ -13,5 +13,17 @@ public class MatcherMethod {
         System.out.println(matcher.find()); // false
         matcher.region(20, 30); // start index = 20, end index = 30
         System.out.println(matcher.find()); // true
+
+        // How many times will the invocation of matcher.find() return true?
+        String str = "Aaab 123 ab 787 abba 12ab 55AB";
+
+        Pattern pattern = Pattern.compile("[ab]+");
+
+        Matcher matcher2 = pattern.matcher(str);
+
+        while (matcher2.find()) {
+            System.err.println(matcher2.group());
+        }
+
     }
 }
