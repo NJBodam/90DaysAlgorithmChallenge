@@ -1,9 +1,7 @@
 package sub;
 
-import com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ListFiltering {

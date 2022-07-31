@@ -1,11 +1,7 @@
 package sub.queueinterface;
 
-import com.sun.tools.javac.util.List;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.Queue;
+import java.util.*;
 
 public class DequeTest {
 
