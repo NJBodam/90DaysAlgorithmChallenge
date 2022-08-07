@@ -1,5 +1,6 @@
 package sub.regex;
 
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -50,6 +51,12 @@ public class FindAndReplace {
 
         String result2 = text2.replaceAll(regex2, "").replaceAll(regex3, "");
         System.out.println(result2);
+
+        System.out.print("**");
+        System.out.println();
+        System.out.println("**");
+        System.out.print("**");
+
 
 
 
