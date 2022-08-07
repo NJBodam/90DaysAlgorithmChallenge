@@ -9,7 +9,7 @@ public class DequeTest {
     public static void main(String[] args) {
         System.err.println("<<<<<<<<<<< Test >>>>>>>>>>>>>");
 
-        Deque<String> states = new ArrayDeque<String>();
+        Deque<String> states = new ArrayDeque<>();
 
         states.add("Germany");
         states.add("France");

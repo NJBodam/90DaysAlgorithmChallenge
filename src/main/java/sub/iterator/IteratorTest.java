@@ -9,7 +9,7 @@ public class IteratorTest {
 
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>(com.sun.tools.javac.util.List.of(1, 2, 3, 4));
+        List<Integer> list = new ArrayList<>(List.of(1, 2, 3, 4));
         ListIterator<Integer> iterator = list.listIterator(); // only for lists!
 
         // go to the last element
